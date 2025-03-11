@@ -1,4 +1,4 @@
-const BACKEND_URL = "https://member-management-backend.onrender.com/";
+const BACKEND_URL = "https://member-management-backend.onrender.com";
 
 // Handle Signup
 document.getElementById('signupForm').addEventListener('submit', async (e) => {
