@@ -9,7 +9,7 @@ document.getElementById('signupForm').addEventListener('submit', async (e) => {
     const password = document.getElementById('password').value;
 
     try {
-        const res = await fetch(`${BACKEND_URL}/users/register`, {
+        const res = await fetch(`${BACKEND_URL}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name, email, password })
