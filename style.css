@@ -1,5 +1,5 @@
 body {
-    background-image: url('member-management-frontend/assets/backgroundAJJ.png');
+    background-image: url('./member-management-frontend/assets/backgroundAJJ.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
