@@ -1,6 +1,55 @@
 body {
-    background-image: url('./member-management-frontend/assets/backgroundAJJ.png');
+    background-image:url(./assets/backgroundAJJ.png);
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    backdrop-filter: blur(4px);
+}
+
+form {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 0.75rem;
+}
+
+input, button, label {
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+}
+
+input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+button {
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+h2 {
+    background-color: rgba(0,0,0,0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
 }
