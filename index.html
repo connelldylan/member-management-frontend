@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MEMBER SIGNUP</title>
+    <title>Member Signup</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Member Signup</h2>
+    <h2>MEMBER SIGNUP</h2>
     <form id="signupForm">
         <input type="text" id="name" placeholder="Name" required>
         <input type="email" id="email" placeholder="Email" required>
         <input type="password" id="password" placeholder="Password" required>
         <input type="text" id="address" placeholder="Address">
-        <input type="date" id="birthdate" placeholder="Birthdate">
-        <input type="date" id="joindate" placeholder="Join Date">
+
+        <div class="input-wrapper">
+            <input type="date" id="birthdate" required>
+            <label for="birthdate" class="floating-placeholder">Birthday</label>
+        </div>
+ 
         <label><input type="checkbox" id="waiverstatus"> Waiver Signed</label>
         <input type="text" id="beltlevel" placeholder="Belt Level">
         <input type="number" id="referredBy" placeholder="Referred By Member ID (optional)">
