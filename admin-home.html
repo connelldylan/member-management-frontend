@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <div>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Home</title>
@@ -9,66 +8,77 @@
 </head>
 <body>
     <div style="background-color: grey; padding: 10%;">
-    <h2 style="text-align: center;">Admin Dashboard</h2>
-    <div>
-        <h3>Delete Member</h3>
-        <input type="number" id="deleteMid" placeholder="Member ID">
-        <button onclick="deleteMember()">Delete</button>
-    </div>
-    <div>
-        <h3>Update Belt Level</h3>
-        <input type="number" id="beltMid" placeholder="Member ID">
-        <input type="text" id="beltLevel" placeholder="Belt Level">
-        <button onclick="updateBelt()">Update</button>
-    </div>
-    <div>
-        <h3>Update Address</h3>
-        <input type="number" id="addressMid" placeholder="Member ID">
-        <input type="text" id="address" placeholder="Address">
-        <button onclick="updateAddress()">Update</button>
-    </div>
-    <div>
-        <h3>Avg Classes by Belt</h3>
-        <input type="text" id="avgBelt" placeholder="Belt Level">
-        <button onclick="getAvgClasses()">Get Average</button>
-        <p id="avgResult"></p>
-    </div>
-    <div>
-        <h3>No Referrals, High Fee</h3>
-        <input type="number" id="minFee" placeholder="Min Fee">
-        <button onclick="getNoReferrals()">Get Members</button>
-        <ul id="noRefResult"></ul>
-    </div>
-    <div>
-        <h3>Top 5 Class Attendees</h3>
-        <button onclick="getTopClasses()">Get Top 5</button>
-        <ul id="topClassesResult"></ul>
-    </div>
-    <div>
-        <h3>Children of Member</h3>
-        <input type="number" id="parentMid" placeholder="Member ID">
-        <button onclick="getChildren()">Get Children</button>
-        <ul id="childrenResult"></ul>
-    </div>
-    <div>
-        <h3>Package Revenue</h3>
-        <input type="number" id="month" placeholder="Month (1-12)">
-        <input type="number" id="year" placeholder="Year">
-        <button onclick="getRevenue()">Get Revenue</button>
-        <ul id="revenueResult"></ul>
-    </div>
-    <div>
-        <h3>Search by Name</h3>
-        <input type="text" id="nameSubstring" placeholder="Name Substring">
-        <button onclick="searchName()">Search</button>
-        <ul id="nameResult"></ul>
-    </div>
-    <div>
-        <h3>Discounted Subscriptions</h3>
-        <input type="number" id="skip" placeholder="Skip N Results">
-        <button onclick="getDiscounted()">Get Subscriptions</button>
-        <ul id="discountResult"></ul>
-    </div>
+        <h2 style="text-align: center;">Admin Dashboard</h2>
+        <div>
+            <h3>Delete Member</h3>
+            <input type="number" id="deleteMid" placeholder="Member ID">
+            <button onclick="deleteMember()">Delete</button>
+        </div>
+        <div>
+            <h3>Update Belt Level</h3>
+            <input type="number" id="beltMid" placeholder="Member ID">
+            <input type="text" id="beltLevel" placeholder="Belt Level">
+            <button onclick="updateBelt()">Update</button>
+        </div>
+        <div>
+            <h3>Update Address</h3>
+            <input type="number" id="addressMid" placeholder="Member ID">
+            <input type="text" id="address" placeholder="Address">
+            <button onclick="updateAddress()">Update</button>
+        </div>
+        <div>
+            <h3>Add Child to Member</h3>
+            <input type="number" id="parentMid" placeholder="Parent Member ID">
+            <input type="number" id="childMid" placeholder="Child Member ID">
+            <button onclick="addChild()">Add Child</button>
+        </div>
+        <div>
+            <h3>Increment Classes Attended</h3>
+            <input type="number" id="classesMid" placeholder="Member ID">
+            <button onclick="incrementClasses()">Add Class</button>
+        </div>
+        <div>
+            <h3>Avg Classes by Belt</h3>
+            <input type="text" id="avgBelt" placeholder="Belt Level">
+            <button onclick="getAvgClasses()">Get Average</button>
+            <p id="avgResult"></p>
+        </div>
+        <div>
+            <h3>Top 5 Class Attendees</h3>
+            <button onclick="getTopClasses()">Get Top 5</button>
+            <ul id="topClassesResult"></ul>
+        </div>
+        <div>
+            <h3>Children of Member</h3>
+            <input type="number" id="parentMidChildren" placeholder="Member ID">
+            <button onclick="getChildren()">Get Children</button>
+            <ul id="childrenResult"></ul>
+        </div>
+        <div>
+            <h3>Package Revenue</h3>
+            <input type="number" id="month" placeholder="Month (1-12)">
+            <input type="number" id="year" placeholder="Year">
+            <button onclick="getRevenue()">Get Revenue</button>
+            <ul id="revenueResult"></ul>
+        </div>
+        <div>
+            <h3>Search by Name</h3>
+            <input type="text" id="nameSubstring" placeholder="Name Substring">
+            <button onclick="searchName()">Search</button>
+            <ul id="nameResult"></ul>
+        </div>
+        <div>
+            <h3>Discounted Subscriptions</h3>
+            <input type="number" id="skip" placeholder="Skip N Results">
+            <button onclick="getDiscounted()">Get Subscriptions</button>
+            <ul id="discountResult"></ul>
+        </div>
+        <div>
+            <h3>Count Referrals</h3>
+            <input type="number" id="referralMid" placeholder="Member ID">
+            <button onclick="countReferrals()">Count Referrals</button>
+            <p id="referralResult"></p>
+        </div>
     </div>
     <script src="admin-home-script.js"></script>
 </body>
