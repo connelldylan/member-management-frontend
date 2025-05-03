@@ -95,6 +95,12 @@ async function incrementClasses() {
     alert(data.error || data.message);
 }
 
+async function getNoWaiver() {
+    const data = await fetchWithAuth(`${BACKEND_URL}/admin/no-waiver`);
+    const ul = document.getElementById('noWaiverResult');
+    ul.innerHTML = data.error || data.members.map(m => `<li>MID: ${m.mid} - ${m.name}</li>`).join('');
+}
+
 async function getAvgClasses() {
     const beltLevel = document.getElementById('avgBelt').value;
     const data = await fetchWithAuth(`${BACKEND_URL}/admin/avg-classes-by-belt?beltLevel=${beltLevel}`);
