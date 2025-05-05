@@ -163,3 +163,15 @@ async function countReferrals() {
     const data = await fetchWithAuth(`${BACKEND_URL}/admin/count-referrals?mid=${mid}`);
     document.getElementById('referralResult').textContent = data.error || `Referrals: ${data.referralCount}`;
 }
+
+async function getMembersWithReferrals() {
+    const data = await fetchWithAuth(`${BACKEND_URL}/admin/members-with-referrals`);
+    const ul = document.getElementById('referralsResult');
+    ul.innerHTML = data.error || data.members.map(m => `<li>MID: ${m.mid} - ${m.name}${m.referrerid ? ` (Referred by MID: ${m.referrerid})` : ''}</li>`).join('');
+}
+
+async function getHighAttendance() {
+    const data = await fetchWithAuth(`${BACKEND_URL}/admin/high-attendance-members`);
+    const ul = document.getElementById('highAttendanceResult');
+    ul.innerHTML = data.error || data.highAttendanceMembers.map(m => `<li>MID: ${m.mid} - ${m.name} - Classes: ${m.classesattended}</li>`).join('');
+}
